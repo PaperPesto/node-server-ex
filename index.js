@@ -1,6 +1,7 @@
 const express = require("express");
 
 var app = express();
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.send({
@@ -21,4 +22,6 @@ app.get('/home', (req, res) => {
     res.send('Home page');
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('App listeninng on port 3000');
+});
