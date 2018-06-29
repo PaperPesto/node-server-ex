@@ -1,0 +1,22 @@
+{
+  "name": "server-ex",
+  "version": "1.0.0",
+  "description": "node js exercise for web server serving static and partial pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaperPesto/node-server-ex.git"
+  },
+  "author": "Leonardo Bianchini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaperPesto/node-server-ex/issues"
+  },
+  "homepage": "https://github.com/PaperPesto/node-server-ex#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
