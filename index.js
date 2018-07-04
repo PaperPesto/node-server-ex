@@ -7,7 +7,6 @@ var app = express();
 // middleware
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
-app.use(express.static(__dirname + '/public'));
 
 app.use((req, res, next) => {
     // all requests are intercepted here
@@ -21,8 +20,14 @@ app.use((req, res, next) => {
             console.log('Unable to append to ServiceWorkerRegistration.log');
         }
     });
-    next(); // if request is OK, next fires request to app handlers
+    next(); // continues program execution; next fires request to app handlers
 });
+
+// site under maintenance
+//app.use((req, res, next) => {
+//    res.render('maintenance.hbs');
+//})
+app.use(express.static(__dirname + '/public'));
 
 // app handler
 app.get('/', (req, res) => {
